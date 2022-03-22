@@ -5,11 +5,6 @@ import App from '../App';
 import renderWithRouter from '../helpers/renderWithRouter';
 
 describe('Testa o componente About', () => {
-  // it('Testa se a página contém as informações sobre a Pokédex', () => {
-  //   renderWithRouter(<App />);
-  //   const aboutLink = screen.getByRole('link', { name: 'About' });
-  //   userEvent.click(aboutLink);
-  // });
   it('Testa se a página contém um heading h2 com o texto About Pokédex', () => {
     renderWithRouter(<App />);
     const aboutLink = screen.getByRole('link', { name: 'About' });
