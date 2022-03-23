@@ -14,7 +14,7 @@ describe('Testa o componente NotFound', () => {
   });
   it('Testa se página mostra a imagem https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif', () => {
     const { history } = renderWithRouter(<App />);
-    history.push('/pagina-inexistente');
+    history.push('/claudio');
 
     const notFoundImage = screen.getAllByRole('img');
 

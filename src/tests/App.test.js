@@ -44,7 +44,7 @@ describe('Testa o componente App', () => {
   it(`Testa se a aplicação é redirecionada para a página Not Found
   ao entrar em uma URL desconhecida`, () => {
     const { history } = renderWithRouter(<App />);
-    history.push('/pagina-inexistente');
+    history.push('/claudio');
     const notFoundTitle = screen
       .getByRole('heading', { name: /page requested not found/i });
     expect(notFoundTitle).toBeInTheDocument();
