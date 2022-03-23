@@ -23,15 +23,15 @@ describe('Testa o componente About', () => {
     expect(firstParagraph).toBeInTheDocument();
     expect(secondParagraph).toBeInTheDocument();
   });
-  it('Teste se a página contém uma imagem especifica de uma Pokédex', () => {
+  it('Testa se a página contém uma imagem especifica de uma Pokédex', () => {
     renderWithRouter(<App />);
     const aboutLink = screen.getByRole('link', { name: 'About' });
 
     userEvent.click(aboutLink);
 
-    const favPokemonsLink = screen.getByRole('img', { role: 'https://cdn2.bulbagarden.net/upload/thumb/8/86/Gen_I_Pok%C3%A9dex.png/800px-Gen_I_Pok%C3%A9dex.png' });
+    const pokedexImage = screen.getByAltText('Pokédex');
 
-    expect(favPokemonsLink).toBeInTheDocument();
-    expect(favPokemonsLink).toHaveAttribute('src', 'https://cdn2.bulbagarden.net/upload/thumb/8/86/Gen_I_Pok%C3%A9dex.png/800px-Gen_I_Pok%C3%A9dex.png');
+    expect(pokedexImage).toBeInTheDocument();
+    expect(pokedexImage).toHaveAttribute('src', 'https://cdn2.bulbagarden.net/upload/thumb/8/86/Gen_I_Pok%C3%A9dex.png/800px-Gen_I_Pok%C3%A9dex.png');
   });
 });
